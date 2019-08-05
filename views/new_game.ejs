@@ -1,0 +1,22 @@
+<% include ./partials/navbar %>
+<div class="container mt-4">
+  <div class="card card-body">
+    <h1>Create New Game Lobby</h1>
+    <form action="/game/new" method="post">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="visibility">Visibility:</label>
+        <select name="visibility" id="visibility" class="form-control">
+          <option value="true">Public</option>
+          <option value="false">Private</option>
+        </select>
+      </div>
+      <input type="hidden" name="user_id" value="<%= user._id %>">
+      <input type="hidden" name="user_name" value="<%= user.name %>">
+      <button type="submit" class="btn btn-primary">Create Lobby</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<% include ./partials/navbar %>
+<div class="container mt-4">
+  <div class="card card-body">
+    <h1>Lobbies</h1>
+    <a href="/game/new" class="btn btn-primary"><i class="mdi mdi-plus"></i> New Game</a>
+    <br>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><i class="mdi mdi-magnify mr-2"></i><b>Search</b></div>
+      </div>
+      <input type="text" name="search" id="search_filter" class="form-control">
+    </div>
+    <div class="table-responsive">
+      <table id="sortable" class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Title</th>
+            <th>Creator</th>
+            <th>Created at</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let game of games) { %>
+          <tr>
+            <td><%= game.title %></td>
+            <td><%= game.user_name %></td>
+            <td><%= game.createdAt %></td>
+            <td class="d-flex">
+              <a href="/game/<%= game._id %>" class="btn btn-sm btn-primary mr-2"><i class="mdi mdi-plus"></i> Join</a>
+              <% if (game.user_id == user._id) { %>
+              <form action="/game/<%= game._id %>/delete" method="post">
+                <button type="submit" class="btn btn-sm btn-danger">
+                  <i class="mdi mdi-close"></i> Delete</button>
+              </form>
+              <% } %>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<style>
+  th {
+    cursor: pointer;
+  }
+</style>
+<script src="/js/filterable.js"></script>

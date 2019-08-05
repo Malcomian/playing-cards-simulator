@@ -1,0 +1,9 @@
+<% include ./partials/navbar %>
+<div class="container mt-4">
+  <div class="card card-body">
+    <h1 class="mt-4">Dashboard</h1>
+    <p class="lead mb-3">Welcome, <%= user.name %>!</p>
+    <a href="/lobbies" class="btn btn-primary mb-2"><i class="mdi mdi-account-group"></i> Lobbies</a>
+    <a href="/users/logout" class="btn btn-secondary"><i class="mdi mdi-logout"></i> Logout</a>
+  </div>
+</div>

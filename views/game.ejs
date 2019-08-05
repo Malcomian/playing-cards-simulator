@@ -1,0 +1,15 @@
+<% include ./partials/navbar %>
+<div class="container game-title">
+  <p><b>Title:</b> <%= game.title %>, <b>Host:</b> <%= game.user_name %>, <b>Created At:</b> <%= game.createdAt %></p>
+</div>
+<div class="container d-flex">
+  <button class="btn btn-primary mr-2" id="shuffle">Shuffle</button>
+  <button class="btn btn-primary" id="reset">Reset</button>
+</div>
+<br>
+<div class="container" id="play-area"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/card.js"></script>
+<script src="/js/deck.js"></script>
+<script src="/js/player.js"></script>
+<script src="/js/main.js"></script>

@@ -1,0 +1,123 @@
+/* body {
+  overflow: hidden;
+} */
+
+.container {
+  transition: all 0.2s;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.game-title {
+  color: chartreuse
+}
+
+/*
+  ----- card styles -----
+*/
+
+.board {
+  width: 100vw;
+  height: 100vh;
+}
+
+.ui-draggable {
+  transition: all 0.2s;
+}
+
+#play-area {
+  height: 75vh;
+  outline: 2px solid chartreuse;
+  padding: 15px;
+}
+
+#play-area .ui-draggable {
+  width: 100px;
+  height: 140px;
+}
+
+#play-area .card {
+  /* margin: 10px; */
+  background-color: white;
+  width: 100px;
+  height: 140px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+#play-area .card {
+  position: absolute;
+}
+
+.shift {
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+.back {
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.red {
+  color: red;
+}
+
+.suit {
+  position: absolute;
+  margin-left: 4px;
+  line-height: 18px;
+  margin-top: 5px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.suit.inverse {
+  top: 92px;
+  left: 76px;
+}
+
+.suit.inverse.joker {
+  top: 38px;
+  left: 76px;
+}
+
+.inverse {
+  transform: rotate(180deg);
+}
+
+.symbol {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 22px;
+}
+
+.symbol.ace {
+  font-size: 60px;
+}
+
+.center-off {
+  padding-top: 30px;
+}
+
+.fours {
+  padding-top: 38px;
+}
+
+.center-off-alt {
+  padding-top: 24px;
+}
+
+.face {
+  font-size: 60px;
+}
+
+#play-area .card .mdi-close {
+  width: 11px;
+  height: 5px;
+  line-height: 10px;
+}
