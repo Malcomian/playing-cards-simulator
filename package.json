@@ -11,19 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mdi/font": "^3.5.95",
+    "@mdi/font": "^3.9.97",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.5.0",
     "connect-flash": "^0.1.1",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.15.6",
-    "jquery": "^3.3.1",
+    "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
     "jquery-ui-dist": "^1.12.1",
-    "mongoose": "^5.4.1",
-    "passport": "^0.4.0",
+    "mongoose": "^5.9.25",
+    "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.3.0"
   }
 }
